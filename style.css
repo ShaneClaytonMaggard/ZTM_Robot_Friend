@@ -1,0 +1,194 @@
+
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 2px 2px 0px black;
+	color: darkcyan
+
+}
+
+.robots {
+	display: flex;
+	justify-content: center;
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #5f93e8;
+	 border: 1px solid black;
+}
+
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+	display: block;
+} 
+
+.eyes {
+	display: flex;
+}
+
+.head:hover{
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+
+body:has(.left_arm:hover) .hello ,.left_arm:hover{
+	display: flex;
+	rotate: 150deg;
+}
+
+body:has(.right_arm:hover) .bye ,.right_arm:hover{
+	display: block;
+	rotate: -150deg;
+}
+
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+	justify-content: space-between;
+	align-content: flex-end;
+	
+} 
+.torso:hover{
+	scale: 1.05;
+}
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+
+.right_arm { 
+	margin-left: 10px; 
+} 
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+	z-index: -1;
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg { 
+	margin-left: 30px; 
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 5px;
+	border-radius: 15px; 
+	background-color: white;  
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px;
+	transform: translateY(-208px) translateX(46px); 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+	transform: translateY(-208px) translateX(18px); 
+}
+.bubble{
+	background-color: aliceblue;
+	text-align: center;
+	width: 10vw;
+	margin: 50px auto;
+	border: 4px solid #00bfb6;
+	padding: 20px;
+	text-align: center;
+	font-weight: 900;
+	color: #00bfb6;
+	font-family: arial;
+	transform: rotate(-150deg);
+	position: fixed;
+}
+
+.hello{
+	border-radius: 25px 25px 0px 25px;
+	float: left;
+	display: none;
+	transform: rotate(-180deg);
+	margin-left: 20%;
+}
+.bye{
+	border-radius: 25px 25px 25px 0px;
+	float: right;
+	display: none;
+	margin-left: 65%;
+}
+
+@keyframes scrollBg {
+	from {
+	  transform: translateY(125%);
+	}
+	to {
+	  transform: translateY(0px);
+	}
+  }
+  
+  .scroll-bg {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	padding-bottom: 330px;
+	background-image: url('https://th.bing.com/th/id/OIP.W1_Y7Q_L8RFCkrDgvWyvggHaEK?w=251&h=180&c=7&r=0&o=5&pid=1.7');
+	background-size: cover;
+	animation: scrollBg 3s ease-in-out;
+  }
+
+
+
+
+
+
